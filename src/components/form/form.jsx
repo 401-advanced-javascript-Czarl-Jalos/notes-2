@@ -35,9 +35,10 @@ class Form extends React.Component {
   }
 
   render() {
-
-    let result = this.state.rest + '  ' + this.state.value;
-  
+    let result;
+    if(this.state.value) {
+      result = this.state.rest + '  ' + this.state.value;
+    }
     return ( 
       <form  onSubmit={this.handleSubmit} >
         <div>
@@ -56,7 +57,7 @@ class Form extends React.Component {
           <input onClick={this.handleClick} type="button" value="DELETE"/>
         </div>
 
-        <textarea name="result" id="result" cols="90" rows="30" value={result} onChange={this.handleChange}></textarea>
+        <textarea name="result" id="result" cols="90" rows="30" value={result} ></textarea>
       </form>
     );
   }
