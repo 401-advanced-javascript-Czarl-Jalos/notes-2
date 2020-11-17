@@ -1,0 +1,26 @@
+form {
+  display: inline-block;
+  margin: 13px 13px;
+}
+
+.button input{
+  margin: 20px 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+  background-color: rgb(163, 163, 163);
+  padding: 3px 5px 3px 5px;
+}
+
+.button input:active {
+  outline: none;
+  background-color: rgb(204, 204, 204);
+}
+.button input:focus {
+  outline: none;
+  background-color: rgb(204, 204, 204);
+}
+.button input:target {
+  outline: none;
+  background-color: rgb(204, 204, 204);
+}
