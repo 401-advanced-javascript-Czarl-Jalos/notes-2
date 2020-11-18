@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://cfJalos.github.io/401-advanced-javascript-Czarl-Jalos/notes-2",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "“predeploy": "npm run build"
   },
   "repository": {
     "type": "git"
@@ -34,6 +37,7 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint-plugin-react": "^7.21.5"
+    "eslint-plugin-react": "^7.21.5",
+    "gh-pages": "^3.1.0"
   }
 }

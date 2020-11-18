@@ -9,9 +9,11 @@ class Results extends React.Component {
 
     return (
       <>
-        <ul>
-          {value.map(person => <li key={person.name}>{person.name}</li>)}
-        </ul>
+      <pre>
+        <code>
+            <p>{JSON.stringify(value, null, 2)}</p>
+        </code>
+     </pre>
       </>
     );
   }
