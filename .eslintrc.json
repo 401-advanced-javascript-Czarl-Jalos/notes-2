@@ -6,13 +6,8 @@
     "jest": true,
     "es6": true
   },
-  "parser": "babel-eslint",
-  "globals": {
-    "fail": true
-  },
   "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
+    "eslint:recommended"
   ],
   "parserOptions": {
     "sourceType": "module",
