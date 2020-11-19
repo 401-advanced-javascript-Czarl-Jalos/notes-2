@@ -10,12 +10,14 @@ class App extends React.Component {
     super(props);
     this.state = { 
       value: [],
+      url: '',
+      method: '',
     };
   }
 
   // this function updates our state for the people component
-  handleList = (payload) => {
-    this.setState({ value: payload });
+  handleList = (payload,link, rest) => {
+    this.setState({ value: payload, url: link, method: rest });
     console.log(this.state);
   }
 
@@ -25,7 +27,7 @@ class App extends React.Component {
       <div className="main">
         <Header/>
         <Form handleList={this.handleList}/>
-        <Results value={this.state.value}/>
+        <Results value={this.state}/>
         < Footer/>
       </div>
     );

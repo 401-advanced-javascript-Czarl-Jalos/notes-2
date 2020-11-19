@@ -5,6 +5,13 @@ import './form.scss';
 
 function Form(props) {
  
+  let method;
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    method = e.target.value;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const url = e.target.url.value;
@@ -12,7 +19,7 @@ function Form(props) {
     const data = await response.json();
 
  
-    props.handleList(data);
+    props.handleList(data, url, method);
     
   };
 
@@ -28,11 +35,10 @@ function Form(props) {
         
       </div>
       <div className='button'>
-
-        <input type="button" value="GET"/>
-        <input type="button" value="POST"/>
-        <input type="button" value="PUT"/>
-        <input type="button" value="DELETE"/>
+        <input onClick={handleClick} type="button" value="GET"/>
+        <input onClick={handleClick} type="button" value="POST"/>
+        <input onClick={handleClick} type="button" value="PUT"/>
+        <input onClick={handleClick} type="button" value="DELETE"/>
       </div>
 
      
